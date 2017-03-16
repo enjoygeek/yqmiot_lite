@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>月球猫互联</title>
+    <link rel="stylesheet" type="text/css" href="https://res.wx.qq.com/open/libs/weui/1.1.1/weui.min.css" />
+</head>
+<body>
+    <div id="container">
+        <div class="page">
+            <div class="page__bd">
+                <div class="weui-tab">
+                    <div class="weui-tab__panel">
+                        <div class="weui-panel">
+                            <div class="weui-panel__hd">我的设备</div>
+                            <div class="weui-panel__bd">
+                                <div class="weui-media-box weui-media-box_appmsg" v-for="node in nodes">
+                                    <div class="weui-media-box__hd">
+                                        <img class="weui-media-box__thumb" src="data:image/jpeg;base64,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" alt="">
+                                    </div>
+                                    <div class="weui-media-box__bd">
+                                        <h4 class="weui-media-box__title">${node.name}</h4>
+                                        <p class="weui-media-box__desc">${node.status}</p>
+                                    </div>
+                                    <div class="weui-media-box__ft">
+                                        <input class="weui-switch" type="checkbox">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="weui-tabbar">
+                        <a href="javascript:;" class="weui-tabbar__item weui-bar__item_on">
+                            <img src="http://www.easyicon.net/api/resizeApi.php?id=1149878&size=72" alt="" class="weui-tabbar__icon">
+                            <p class="weui-tabbar__label">我的设备</p>
+                        </a>
+                        <a href="javascript:;" class="weui-tabbar__item">
+                            <img src="http://www.easyicon.net/api/resizeApi.php?id=1149112&size=72" alt="" class="weui-tabbar__icon">
+                            <p class="weui-tabbar__label">个人中心</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!--         <div v-if="logined">
+            <div><span>当前用户：</span><span>${account.username}</span></div>
+            <div>
+                <ul>
+                    <li v-for="node in nodes" @click="changeStatus(node.id)">${node.name} - ${node.status}</li>
+                </ul>
+            </div>
+            <div class="weui-cells">
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <p>标题文字</p>
+                    </div>
+                    <div class="weui-cell__ft">说明文字</div>
+                </div>
+            </div>
+            <form action="/addnode" method="post">
+                <input type="text" name="name">
+                <input type="text" name="model">
+                <input type="submit" value="添加设备">
+            </form>
+        </div>
+        <div v-else>
+            <a href="/login" class="weui-btn weui-btn_primary">登陆</a>
+        </div>
+        <div v-html="log"></div> -->
+    </div>
+    <script type="text/javascript" src="https://res.wx.qq.com/open/libs/weuijs/1.1.1/weui.min.js"></script>
+    <script src="https://unpkg.com/jquery@3.1.0/dist/jquery.min.js"></script>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+    <script type="text/javascript">
+        $().ready(function() {
+            var m;
+            var v = new Vue({
+                delimiters: ['${', '}'],
+                el: "#container",
+                data: {
+                    %if account:
+                    logined: true,
+                    account: {
+                        id: {{account.id}},
+                        username: "{{account.username}}",
+                    },
+                    %else:
+                    logined: false,
+                    %end
+                    nodes: [
+                        %for node in nodes:
+                        {id: {{node.id}}, name: "{{node.name}}", model: "{{node.model}}", status: "online"},
+                        %end
+                    ],
+                    log: "日志："
+                },
+                methods: {
+                    changeStatus: function(nodeid) {
+                        topic = "yqmiot/" + v.account.id + "/method/call"
+                        msg = '{"id": ' + nodeid  + ', "action": "switch"}'
+                        m.publish(topic, msg);
+                        console.log(msg);
+                    }
+                }
+            });
+
+            if (v.logined) {
+                m = mqtt.connect("ws://test.mosquitto.org:8080")
+                m.on('connect', function () {
+                    m.subscribe('yqmiot/' + v.account.id + "/property");
+                    m.subscribe('yqmiot/' + v.account.id + "/event");
+                });
+
+                m.on('message', function (topic, message) {
+                    var topics = topic.split("/");
+                    var json = JSON.parse(message.toString());
+
+                    v.log = message.toString() + "<br/>\n" + v.log;
+
+                    if (topics[2] == "event") { // 处理事件通知
+                        try {
+                            // 大致结构 {
+                            //      id: 2,
+                            //      status: 1, // 暂定 0货1
+                            // }
+
+                            for (var i = 0; i < v.nodes.length; ++i) {
+                                var node = v.nodes[i];
+                                if (node.id == json.id) {
+                                    node.status = json.status;
+                                }
+                            }
+
+                        } catch (e) {
+                            console.log(e);
+                        }
+                    } else if (topics[2] == "property") { // 处理属性更新
+                        // 大致结构 {
+                        //      id: 2,
+                        //      status: 1,
+                        // }
+                        for (var i = 0; i < v.nodes.length; ++i) {
+                            var node = v.nodes[i];
+                            if (node.id == json.id) {
+                                node.status = json.status;
+                            }
+                        }
+                    }
+                })
+            }
+        });
+    </script>
+</body>
+</html>

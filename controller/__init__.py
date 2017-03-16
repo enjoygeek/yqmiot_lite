@@ -48,7 +48,7 @@ def addnode():
         return "参数错误"
 
 # 创建新账号
-@route("/accounts", method="POST")
+@route("/v1/accounts", method="POST")
 def createAccount():
     forms = request.json
     # username = request.forms.getunicode("username")
@@ -89,7 +89,7 @@ def createAccount():
     return json.dumps(result)
 
 # 创建认证
-@route("/auth", method="POST")
+@route("/v1/auth", method="POST")
 def createAuth():
     forms = request.json
     username = forms.get("username")
@@ -122,7 +122,7 @@ def createAuth():
     return json.dumps(result)
 
 # 检查认证
-@route("/auth", method="GET")
+@route("/v1/auth", method="GET")
 def getAuth():
     account = request.get("account")
 
@@ -140,7 +140,7 @@ def getAuth():
     return json.dumps(result)
 
 # 创建新设备
-@route("/nodes", method="POST")
+@route("/v1/nodes", method="POST")
 def createNode():
     # TODO auth 检查
 
@@ -164,7 +164,7 @@ def createNode():
     return json.dumps(result)
 
 # 获得所有设备
-@route("/nodes", method="GET")
+@route("/v1/nodes", method="GET")
 def listNodes():
     result = {}
     result["error"] = 0
@@ -181,7 +181,7 @@ def web():
 
     bottle.route("/", callback=index)
     bottle.route("/login", method=["GET", "POST"], callback=login)
-    bottle.run(host="0.0.0.0", port=8888, reloader=True)
+    bottle.run(host="0.0.0.0", port=8003, reloader=True)
 
 # def mqtt():
 #     while True:
